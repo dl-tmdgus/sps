@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+* {
+		margin:0; padding:0; box-sizing:border-box;
+}
+html, body {
+		font:10pt/180% "맑은 고딕","돋움"; color:#333; background:#f2f2f2;
+}
+a{
+		color:#333; text-decoration:none;
+}
+a:focus {outline:1px solid blue;}
+img {
+		display:block; max-width:100%; color:white;
+}
+
+
+#layout {
+		width:1200px; margin:auto; background:white; position:relative;
+}
+
+/*상단*/
+header {
+		padding-top:20px; position:absolute; width:100%; z-index:1;
+}
+header h1 {
+		text-align:center; margin-bottom:10px;
+}
+header img {
+		display:block; transform:translateY(-72px); width:25%; margin:auto;
+}
+
+/*메뉴*/
+/*nav:hover nav {
+		display:block;
+}*/
+
+nav ul {
+		display:flex; list-style:none; 
+}
+nav li {
+		flex:1; text-align:center; position:relative; 
+}
+
+/*메인메뉴*/
+nav li> a {
+		font-weight:bold; font-size:1.2rem; display:block; padding:10px; color:white;
+}
+nav li>a:hover {
+		background:#1b1b1b; color:white; 
+}
+#nav {transform:translateY(-100px); font-size:1.25rem;}
+
+/*서브메뉴*/
+nav nav {
+		 position:absolute; width:100%; display:none;  z-index:1; opacity:0.9; transform:translateY(-100px); font-weight:bold;
+}
+nav nav a {
+		display:block; color:white; padding:9px; transition:0.5s;
+}
+nav nav a:hover:not(.blank) {
+		background:#1b1b1b; font-weight:bold; text-shadow: 1px 1px 3px rgba(0,0,0, 0.5); color:white;
+}
+
+/*슬라이드*/
+header+ section h2 {display:none;}
+#slide {position:relative;}
+#slide a:not(:first-child) {position:absolute; top:0;}
+
+/*메인(공지사항+갤러리+비즈니스)*/
+main {
+		display:flex; padding:20px;
+}
+main> * {}
+main>div {flex:1; margin-right:40px;}
+main>section {flex:2;}
+main> section h2 {transform:translateY(20px);  }
+
+.tlt {
+		 display:inline-block; color:#1b1b1b; font-size:1.5rem;  margin-bottom:15px; border:none; font-weight:bold;
+}
+
+/*공지사항*/
+#notice {margin-bottom:40px;}
+#notice ul {list-style:none; line-height:250%;}
+#notice li {border-bottom:1px solid #1b1b1b;}
+#notice span {float:right;}
+#notice a:hover {
+		color:black; text-decoration:underline; font-weight:bold;
+}
+
+/*갤러리*/
+#gallery {}
+#gallery a:hover {
+		color:black; text-decoration:underline; font-weight:bold;}
+#gallery span {float:right;}
+#gallery ul {list-style:none; line-height:250%;}
+#gallery li {border-bottom:1px solid #1b1b1b;}
+
+/*하단*/
+footer {display:flex; align-items:center; padding:20px; background-color:#1b1b1b;}
+footer p {flex:2; color:white;}
+footer a {color:white;}
+footer select {padding:3px;}
+footer a:hover {text-decoration:underline;}
