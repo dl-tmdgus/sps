@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//	alert("휴대폰으로 접속해야 정상적으로 표시됩니다.");
 	//상단 메뉴
 	$("nav li>a").on("mouseenter click" , function(){
 		$("nav nav").stop(). slideDown();
@@ -30,4 +30,22 @@ $(document).ready(function(){
 		
 	}
 
+	if(  $(window).width()<=500){
+	//상단 햄버거(닫기)아이콘
+		$("header button").click(function(){
+			$(".mob").stop().slideToggle();
+			if($(this).text() == "X"){
+				$(this).html("&#x2630;");
+				//$('nav').stop().slideUp();
+			}else {
+				$(this).text("X");
+				//$('nav').stop().slideDown();
+			}
+		});
+		//메뉴 각 항목을 클릭시.
+		$(".mob div a").click(function(){
+				$("header button").html("&#x2630;");
+				$(".mob ").stop().slideUp(400);
+		});
+	}
 });///////all end

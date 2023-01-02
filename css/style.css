@@ -11,7 +11,7 @@ a{
 }
 a:focus {outline:1px solid blue;}
 img {
-		display:block; max-width:100%; color:white;
+		display:block;  color:white; height:auto; 
 }
 
 
@@ -29,6 +29,8 @@ header h1 {
 header img {
 		display:block; transform:translateY(-72px); width:25%; margin:auto;
 }
+button {display:none;}
+
 
 /*메뉴*/
 /*nav:hover nav {
@@ -41,6 +43,7 @@ nav ul {
 nav li {
 		flex:1; text-align:center; position:relative; 
 }
+.mob {display:none;}
 
 /*메인메뉴*/
 nav li> a {
@@ -49,7 +52,7 @@ nav li> a {
 nav li>a:hover {
 		background:#1b1b1b; color:white; 
 }
-#nav {transform:translateY(-100px); font-size:1.25rem;}
+#nav {transform:translateY(-100px);}
 
 /*서브메뉴*/
 nav nav {
@@ -59,7 +62,7 @@ nav nav a {
 		display:block; color:white; padding:9px; transition:0.5s;
 }
 nav nav a:hover:not(.blank) {
-		background:#1b1b1b; font-weight:bold; text-shadow: 1px 1px 3px rgba(0,0,0, 0.5); color:white;
+		background:#1b1b1b; font-weight:bold;  color:white;
 }
 
 /*슬라이드*/
@@ -88,7 +91,7 @@ main> section h2 {transform:translateY(20px);  }
 #notice a:hover {
 		color:black; text-decoration:underline; font-weight:bold;
 }
-
+#img img {max-width:100%;}
 /*갤러리*/
 #gallery {}
 #gallery a:hover {
@@ -97,6 +100,8 @@ main> section h2 {transform:translateY(20px);  }
 #gallery ul {list-style:none; line-height:250%;}
 #gallery li {border-bottom:1px solid #1b1b1b;}
 
+
+
 /*하단*/
 footer {display:flex; align-items:center; padding:20px; background-color:#1b1b1b;}
 footer p {flex:2; color:white;}
@@ -104,11 +109,12 @@ footer a {color:white;}
 footer select {padding:3px;}
 footer a:hover {text-decoration:underline;}
 
+/*****모바일******/
 @media(max-width:500px){
-	body {width:100vw !important; overflow:hidden;}
+	body {width:100vw !important; overflow-x:hidden;}
 	main>div {display:none;}
 	header h1 a {font-size:2rem;}
-	#slide img {height:2300px; width:2300px;}
+	#slide img {height:2000px; width:2300px;}
 	#slide {left:-550px;}
 	#layout {overflow:hidden;}
 	#img img {height:550px;}

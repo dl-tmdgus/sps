@@ -2,6 +2,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
 		<title>서울사진학원</title>
 		<script src="js/jquery-1.12.3.js"></script>
 		<script src="js/seoul.js"></script>
@@ -12,6 +13,8 @@
 			<header>
 				<h1>
 					<a href="index.html"><img src="images/logo1.png" alt="로고"></a>
+					<button type="button">&#x2630;</button>
+					<button type="button" id="x">X</button>
 				</h1>
 				<nav>
 					<ul>
@@ -49,13 +52,23 @@
 						</li>
 					</ul>
 				</nav>
+				<nav class="mob">
+					<div>
+						<a href="#">학원안내</a>
+						<a href="#">수강과정안내</a>
+						<a href="#">사진교실</a>
+						<a href="#">상담실</a>
+						<a href="#">공지사항</a>
+						<a href="#">전시안내</a>
+					</div>
+				</nav>
 			</header>
 			<section>
 				<h2>슬라이드 이미지</h2>
 				<div id="slide">
-					<a href="#"><img src="images/landscpae3.jpg" alt="건설 한길 40년"></a>
-					<a href="#"><img src="images/landscpae2.jpg" alt="정직 성실 고객"></a>
-					<a href="#"><img src="images/landscpae1.jpg" alt="고객 감동을 위해"></a>
+					<a href="#"><img src="images/landscpae3.jpg" alt="1"></a>
+					<a href="#"><img src="images/landscpae2.jpg" alt="2"></a>
+					<a href="#"><img src="images/landscpae1.jpg" alt="3"></a>
 				</div>
 			</section>
 			<main>
@@ -81,10 +94,10 @@
 						</div>
 					</section>
 				</div>
-				<section>
+				<section id="img">
 					<img src="images/reason.jpg" alt="이유">
-					<h2 class="tlt">국비안내</h2>
-					<img src="images/gukbi.jpg" alt="국비">
+			<h2 class="tlt">국비안내</h2>
+					<img src="images/gukbi.jpg" alt="국비" id="gg">
 				</section>
 			</main>
 			<footer>
