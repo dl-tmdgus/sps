@@ -103,3 +103,24 @@ footer p {flex:2; color:white;}
 footer a {color:white;}
 footer select {padding:3px;}
 footer a:hover {text-decoration:underline;}
+
+@media(max-width:500px){
+	body {width:100vw !important; overflow:hidden;}
+	main>div {display:none;}
+	header h1 a {font-size:2rem;}
+	#slide img {height:2300px; width:2300px;}
+	#slide {left:-550px;}
+	#layout {overflow:hidden;}
+	#img img {height:550px;}
+	#img img{left:-300px;}
+	#img h2 {display:none;}
+	header   {background:black;}
+	header h1 img {transform:scale(2.5) translate(5px,10px);}
+	header nav {display:none;}
+	footer {display:none;}
+	button {display:block; transform:scale(5) translate(15px,-19px); border:none; background:none; color:white; font-size:1.5rem;}
+	.mob {display:none; width:100%; position:absolute; height:230vh; background:white;}
+	.mob a {display:flex; flex-direction:column; padding:70px 80px; font-size:3rem; font-weight:bold;	border-bottom:1px solid gray;}
+	.mob button {}
+	#x {display:none;}
+}
